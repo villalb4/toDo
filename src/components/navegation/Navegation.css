@@ -20,11 +20,26 @@
   color: var(--text-titles);
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .navegation_divFocus {
   height: 4px;
   width: 89px;
   background-color: var(--blue);
+  background-color: transparent;
   border-radius: 4px 4px 0 0;
+  transition: all ease 0.3s;
+}
+
+.navegation_divButton.all.active > .navegation_divFocus{
+  background-color: var(--blue);
+}
+
+.navegation_divButton.act.active > .navegation_divFocus{
+  background-color: var(--blue);
+}
+
+.navegation_divButton.completed.active > .navegation_divFocus{
+  background-color: var(--blue);
 }
