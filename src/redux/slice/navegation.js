@@ -1,18 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  sections: []
+  all: true,
+  active: false, 
+  completed: false
 }
 
 const navegationSlice = createSlice({
   name: 'navegation',
   initialState: initialState,
   reducers : {
-    setSection: function(state, action) {
-      state.sections = action.payload
-    }
+    setAll: function(state, action) {
+      state.all = action.payload
+    },
+    setActive: function(state, action) {
+      state.active = action.payload
+    },
+    setCompleted: function(state, action) {
+      state.completed = action.payload
+    },
   }
 })
 
-export const {setSection} = navegationSlice.actions
+export const {setAll, setActive, setCompleted} = navegationSlice.actions
 export default navegationSlice.reducer
