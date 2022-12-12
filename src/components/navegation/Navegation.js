@@ -1,9 +1,13 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux'
 import './Navegation.css'
+import { setAll, setActive, setCompleted } from '../../redux/slice/navegation'
 
 function Navegation() {
 
-  const [allButton, setAllButton] = useState(false)
+  const dispatch = useDispatch()
+
+  const [allButton, setAllButton] = useState(true)
   const [activeButton, setActiveButton] = useState(false)
   const [completedButton, setCompletedButton] = useState(false)
 
@@ -11,18 +15,27 @@ function Navegation() {
     setAllButton(true)
     setActiveButton(false)
     setCompletedButton(false)
+    dispatch(setAll(true))
+    dispatch(setActive(false))
+    dispatch(setCompleted(false))
   }
 
   const handleActiveButton = () => {
     setActiveButton(true)
     setAllButton(false)
     setCompletedButton(false)
+    dispatch(setActive(true))
+    dispatch(setAll(false))
+    dispatch(setCompleted(false))
   }
 
   const handleCompletedButton = () => {
     setCompletedButton(true)
     setActiveButton(false)
     setAllButton(false)
+    dispatch(setCompleted(true))
+    dispatch(setActive(false))
+    dispatch(setAll(false))
   }
 
   return (
