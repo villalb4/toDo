@@ -6,9 +6,9 @@
 }
 
 .App {
-  max-width: 608px;
+  max-width: 668px;
   margin: 0 auto;
-  padding-top: 32px;
+  padding: 32px 30px;
 }
 
 h1 {
