@@ -28,7 +28,7 @@
   background-color: var(--blue);
   background-color: transparent;
   border-radius: 4px 4px 0 0;
-  transition: all ease 0.3s;
+  /* transition: all ease 0.3s; */
 }
 
 .navegation_divButton.all.active > .navegation_divFocus{
