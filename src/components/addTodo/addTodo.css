@@ -15,6 +15,11 @@
   font-weight: 400;
   font-size: 14px;
   color: var(--text-placeholder);
+  outline: none;
+  transition: all ease 0.2s;
+}
+.addTodo_input:focus {
+  border: 1px solid var(--blue);
 }
 
 .addTodo_button {
@@ -26,4 +31,10 @@
   font-weight: 600;
   font-size: 14px;
   color: #FFFFFF;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.addTodo_button:hover {
+  background-color: var(--blue-hover);
 }
