@@ -1,31 +1,41 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux'
+import { setTask } from '../../redux/slice/tasks'
 import './addTodo.css'
 
 function AddTodo() {
 
+  const dispatch = useDispatch()
+
   const [item, setItem] = useState({
-    id: crypto.randomUUID(),
+    id: "",
     task: "",
     completed: false,
   })
 
   const handleChange = (e) => {
     const tarea = e.target.value
-    setItem({task : tarea})
+    setItem({
+      id: crypto.randomUUID(),
+      task : tarea,
+      completed: false
+    })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    localStorage.setItem('tasks', JSON.stringify(item))
-    setItem({id: "", task: "", completed: false})
+    if(item.task) {
+      dispatch(setTask(item))
+      setItem({id: "", task: "", completed: false})
+    }
   }
 
   return (
     <div className='addTodo_component'>
-      <div className='addTodo_divContainer'>
-        <input className='addTodo_input' placeholder='add details' value={item.task} onChange={handleChange}/>
-        <input type="submit" className='addTodo_button' value="add" onClick={handleSubmit}/>
-      </div>
+      <form className='addTodo_divContainer'>
+        <input className='addTodo_input' placeholder='add details' value={item.task} onChange={handleChange} autoFocus/>
+        <input type="submit" className='addTodo_button' value="Add" onClick={handleSubmit}/>
+      </form>
     </div>
   )
 }
