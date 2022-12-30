@@ -21,34 +21,15 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
-/* .navegation_divFocus {
-  height: 4px;
-  width: 89px;
-  background-color: var(--blue);
-  background-color: transparent;
-  border-radius: 4px 4px 0 0;
-} */
-
-.navegation_divButton.all.active > .navegation_divFocus{
-  background-color: var(--blue);
-}
-
-.navegation_divButton.act.active > .navegation_divFocus{
-  background-color: var(--blue);
-}
-
-.navegation_divButton.completed.active > .navegation_divFocus{
-  background-color: var(--blue);
-}
-
-.navegation_divFocuss {
+.navegation_divFocus {
   position: absolute;
   top: 51px;
   height: 4px;
   width: 89px;
   background-color: var(--blue);
   border-radius: 4px 4px 0 0;
-  transition: all ease 0.5s;
+  transition: all ease 0.4s;
 }
