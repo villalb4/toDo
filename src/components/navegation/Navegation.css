@@ -1,6 +1,7 @@
 .navegation_component {
   border-bottom: 1px solid #BDBDBD;
   padding: 0 50px;
+  position: relative;
 }
 
 .navegation_divContainer {
@@ -9,7 +10,7 @@
 }
 
 .navigation_button {
-  padding: 19px 0 15px 0;
+  padding: 23px 0 15px 0;
   width: 89px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -22,14 +23,13 @@
   cursor: pointer;
 }
 
-.navegation_divFocus {
+/* .navegation_divFocus {
   height: 4px;
   width: 89px;
   background-color: var(--blue);
   background-color: transparent;
   border-radius: 4px 4px 0 0;
-  /* transition: all ease 0.3s; */
-}
+} */
 
 .navegation_divButton.all.active > .navegation_divFocus{
   background-color: var(--blue);
@@ -41,4 +41,14 @@
 
 .navegation_divButton.completed.active > .navegation_divFocus{
   background-color: var(--blue);
+}
+
+.navegation_divFocuss {
+  position: absolute;
+  top: 51px;
+  height: 4px;
+  width: 89px;
+  background-color: var(--blue);
+  border-radius: 4px 4px 0 0;
+  transition: all ease 0.5s;
 }

@@ -7,61 +7,46 @@ function Navegation() {
 
   const dispatch = useDispatch()
 
-  const [allButton, setAllButton] = useState(true)
-  const [activeButton, setActiveButton] = useState(false)
-  const [completedButton, setCompletedButton] = useState(false)
+  const [indicator, setIndicator] = useState(50)
 
   const handleAllButton = () => {
-    setAllButton(true)
-    setActiveButton(false)
-    setCompletedButton(false)
     dispatch(setAll(true))
     dispatch(setActive(false))
     dispatch(setCompleted(false))
+    setIndicator(50)
   }
 
   const handleActiveButton = () => {
-    setActiveButton(true)
-    setAllButton(false)
-    setCompletedButton(false)
     dispatch(setActive(true))
     dispatch(setAll(false))
     dispatch(setCompleted(false))
+    setIndicator(260)
   }
 
   const handleCompletedButton = () => {
-    setCompletedButton(true)
-    setActiveButton(false)
-    setAllButton(false)
     dispatch(setCompleted(true))
     dispatch(setActive(false))
     dispatch(setAll(false))
+    setIndicator(469)
   }
 
   return (
     <div className='navegation_component'>
       <div className='navegation_divContainer'>
 
-        <div 
-          className={ allButton ? 'navegation_divButton all active' : 'navegation_divButton all' }
-          onClick={handleAllButton}
-        >
+        <div className='navegation_divFocuss' style={{left: `${indicator}px`}}></div>
+
+        <div className='navegation_divButton' onClick={handleAllButton}>
           <button className='navigation_button'>All</button>
           <div className='navegation_divFocus'></div>
         </div>
 
-        <div 
-          className={ activeButton ? 'navegation_divButton act active' : 'navegation_divButton act' }
-          onClick={handleActiveButton}
-        >
+        <div className='navegation_divButton' onClick={handleActiveButton}>
           <button className='navigation_button'>Active</button>
           <div className='navegation_divFocus'></div>
         </div>
 
-        <div 
-          className={ completedButton ? 'navegation_divButton completed active' : 'navegation_divButton completed' }
-          onClick={handleCompletedButton}
-        >
+        <div className='navegation_divButton' onClick={handleCompletedButton}>
           <button className='navigation_button'>Completed</button>
           <div className='navegation_divFocus'></div>
         </div>
