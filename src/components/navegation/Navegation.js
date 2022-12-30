@@ -34,21 +34,18 @@ function Navegation() {
     <div className='navegation_component'>
       <div className='navegation_divContainer'>
 
-        <div className='navegation_divFocuss' style={{left: `${indicator}px`}}></div>
+        <div className='navegation_divFocus' style={{left: `${indicator}px`}}></div>
 
         <div className='navegation_divButton' onClick={handleAllButton}>
           <button className='navigation_button'>All</button>
-          <div className='navegation_divFocus'></div>
         </div>
 
         <div className='navegation_divButton' onClick={handleActiveButton}>
           <button className='navigation_button'>Active</button>
-          <div className='navegation_divFocus'></div>
         </div>
 
         <div className='navegation_divButton' onClick={handleCompletedButton}>
           <button className='navigation_button'>Completed</button>
-          <div className='navegation_divFocus'></div>
         </div>
       </div>
     </div>
