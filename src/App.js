@@ -1,4 +1,3 @@
-import AddTodo from './components/addTodo/addTodo';
 import Navegation from './components/navegation/Navegation';
 import Sections from './components/sections/Sections';
 import './App.css';
