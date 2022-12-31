@@ -1,0 +1,16 @@
+.sections_component {
+  position: relative;
+}
+.sections_divTodo {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all ease 0.3s;
+}
+.sections_divTodo.desactive {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  transform: translateY(-80px);
+}
