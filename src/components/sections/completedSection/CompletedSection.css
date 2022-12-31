@@ -27,7 +27,7 @@
 .allSection_divButton > button {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   position: absolute;
   right: 0;
   background-color: var(--red);
@@ -38,7 +38,7 @@
   line-height: 15px;
   color: #FFFFFF;
   border-radius: 4px;
-  padding: 12.63px 26px;
+  padding: 12.5px 26.24px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -51,9 +51,9 @@
 .completedSection_divImgButton {
   height: 12.63px;
 }
-.completedSection_divImgButton > img {
+/* .completedSection_divImgButton > img {
   height: 9.47px;
   margin: 1.58px 2.5px 1.58px 2.5px;
-}
+} */
 
 
