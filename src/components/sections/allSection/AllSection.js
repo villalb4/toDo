@@ -1,4 +1,5 @@
 import React from 'react'
+import AddTodo from '../../addTodo/addTodo'
 import { useSelector } from 'react-redux'
 
 import './AllSection.css'
@@ -9,6 +10,7 @@ function AllSection() {
 
   return (
     <div>
+      <AddTodo />
       <div className="allSection_divContent">
         {getItems.map((e,i) => {
           return(
