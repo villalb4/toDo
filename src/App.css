@@ -10,7 +10,8 @@
 .App {
   max-width: 668px;
   margin: 0 auto;
-  padding: 32px 30px;
+  padding: 32px 30px 100px 30px;
+  position: relative;
 }
 
 h1 {
@@ -20,4 +21,29 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   color: var(--text-titles);
+}
+
+.App_divAuthor {
+  position: fixed;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.593);
+  backdrop-filter: blur(2px);
+  bottom: 0px;
+  width: 100%;
+  padding: 24px 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.App_p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #A9A9A9;
+}
+.App_a {
+  font-weight: 700;
+  color: #A9A9A9;
 }
