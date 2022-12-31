@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <h1>#todo</h1>
       <Navegation />
-      <AddTodo />
       <Sections />
     </div>
   );
