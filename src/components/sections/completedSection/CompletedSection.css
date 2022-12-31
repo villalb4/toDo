@@ -1,0 +1,59 @@
+.completedSection_divContent {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 19px;
+}
+
+.allSection_divInput.completed {
+  display: flex;
+  justify-content: space-between;
+}
+.allSection_divItems {
+  display: flex;
+  gap: 7px;
+}
+.allSection_divImage {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.allSection_divButton {
+  margin-top: 46.74px;
+  position: relative;
+  height: 40px;
+}
+
+.allSection_divButton > button {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: absolute;
+  right: 0;
+  background-color: var(--red);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 12.63px 26px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.allSection_divButton > button:hover {
+  background-color: var(--red-hover);
+}
+
+.completedSection_divImgButton {
+  height: 12.63px;
+}
+.completedSection_divImgButton > img {
+  height: 9.47px;
+  margin: 1.58px 2.5px 1.58px 2.5px;
+}
+
+
