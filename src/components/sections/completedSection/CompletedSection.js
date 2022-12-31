@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import trash from '../../../assets/trash.png'
+import trash_white from '../../../assets/trash_white.png'
 import './CompletedSection.css'
 
 function CompletedSection() {
@@ -29,7 +30,7 @@ function CompletedSection() {
       <div className='allSection_divButton'>
         <button>
           <div className='completedSection_divImgButton'>
-            <img src={trash} alt=''/>
+            <img src={trash_white} alt=''/>
           </div>
           delete all
         </button>
