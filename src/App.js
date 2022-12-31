@@ -8,6 +8,11 @@ function App() {
       <h1>#todo</h1>
       <Navegation />
       <Sections />
+      <div className='App_divAuthor'>
+        <div>
+          <p className='App_p'>created by <a className='App_a' href='https://github.com/villalb4' target='_blank'>villalb4</a> - devChallenges.io</p>
+        </div>
+      </div>
     </div>
   );
 }
