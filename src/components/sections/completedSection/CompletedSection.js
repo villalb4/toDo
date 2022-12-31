@@ -1,5 +1,4 @@
 import React from 'react'
-import AddTodo from '../../addTodo/addTodo.js'
 import { useSelector } from 'react-redux'
 import trash from '../../../assets/trash.png'
 import './CompletedSection.css'
@@ -21,7 +20,7 @@ function CompletedSection() {
                 <p className='allSection_pTask'>{e.task}</p>
               </div>
               <div className='allSection_divImage'>
-                <img src={trash}></img>
+                <img src={trash} alt='' />
               </div>
             </div>
           )
@@ -30,7 +29,7 @@ function CompletedSection() {
       <div className='allSection_divButton'>
         <button>
           <div className='completedSection_divImgButton'>
-            <img src={trash} />
+            <img src={trash} alt=''/>
           </div>
           delete all
         </button>
