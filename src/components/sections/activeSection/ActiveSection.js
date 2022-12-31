@@ -1,5 +1,4 @@
 import React from 'react'
-import AddTodo from '../../addTodo/addTodo'
 import { useSelector } from 'react-redux'
 
 function ActiveSection() {
@@ -9,7 +8,6 @@ function ActiveSection() {
 
   return (
     <div>
-      <AddTodo />
       <div className="allSection_divContent">
         {itemsFiltered.map((e,i) => {
           return(
