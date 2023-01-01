@@ -23,3 +23,6 @@
   line-height: 22px;
   color: #000000;
 }
+.allSection_pTask.completed {
+  text-decoration: line-through;
+}
