@@ -22,10 +22,20 @@ const taskSlice = createSlice({
       else {
         localStorage.setItem('todoList', JSON.stringify([{...action.payload}]))
       }
+    },
+
+    completedTask: function(state, action) {
+      const taskId = action.payload
+      const newList = state.localTask.map(e => {
+        if(e.id === taskId) return {...e , completed: !e.completed}
+        return e
+      })
+      state.localTask = newList
+      localStorage.setItem('todoList', JSON.stringify(newList))
     }
   }
 })
 
-export const { setTask } = taskSlice.actions
+export const { setTask, completedTask } = taskSlice.actions
 export default taskSlice.reducer
 
