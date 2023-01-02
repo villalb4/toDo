@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { completedTask, deleteSingleTask } from '../../../redux/slice/tasks'
+import { completedTask, deleteSingleTask, deleteAllCompleteTask } from '../../../redux/slice/tasks'
 import trash from '../../../assets/trash.png'
 import trash_white from '../../../assets/trash_white.png'
 import './CompletedSection.css'
@@ -18,9 +18,13 @@ function CompletedSection() {
     dispatch(completedTask(taskId))
   }
 
-  const handleDelete = (e) => {
+  const handleSingleDelete = (e) => {
     const taskId = e
     dispatch(deleteSingleTask(taskId))
+  }
+
+  const handleAllDelete = () => {
+    dispatch(deleteAllCompleteTask())
   }
 
   return (
@@ -41,7 +45,7 @@ function CompletedSection() {
               </div>
               <button
                 className='allSection_buttonImage'
-                onClick={() => handleDelete(e.id)}
+                onClick={() => handleSingleDelete(e.id)}
               >
                 <img src={trash} alt='' />
               </button>
@@ -50,7 +54,7 @@ function CompletedSection() {
         })}
       </div>
       <div className='allSection_divButton'>
-        <button>
+        <button onClick={handleAllDelete}>
           <div className='completedSection_divImgButton'>
             <img src={trash_white} alt=''/>
           </div>
