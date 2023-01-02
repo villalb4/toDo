@@ -23,7 +23,6 @@ const taskSlice = createSlice({
         localStorage.setItem('todoList', JSON.stringify([{...action.payload}]))
       }
     },
-
     completedTask: function(state, action) {
       const taskId = action.payload
       const newList = state.localTask.map(e => {
@@ -32,10 +31,17 @@ const taskSlice = createSlice({
       })
       state.localTask = newList
       localStorage.setItem('todoList', JSON.stringify(newList))
+    },
+    deleteSingleTask: function(state, action) {
+      const taskId = action.payload
+      const newList = state.localTask.filter(e => e.id !== taskId)
+      state.localTask = newList
+      localStorage.setItem('todoList', JSON.stringify(newList))
     }
+
   }
 })
 
-export const { setTask, completedTask } = taskSlice.actions
+export const { setTask, completedTask, deleteSingleTask } = taskSlice.actions
 export default taskSlice.reducer
 
