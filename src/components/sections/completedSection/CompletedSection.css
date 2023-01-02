@@ -13,9 +13,15 @@
   display: flex;
   gap: 7px;
 }
-.allSection_divImage {
+
+.allSection_buttonImage {
   height: 24px;
   margin-right: 8px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .allSection_divButton {
