@@ -37,11 +37,15 @@ const taskSlice = createSlice({
       const newList = state.localTask.filter(e => e.id !== taskId)
       state.localTask = newList
       localStorage.setItem('todoList', JSON.stringify(newList))
+    },
+    deleteAllCompleteTask: function(state, action) {
+      const newList = state.localTask.filter(e => e.completed !== true)
+      state.localTask = newList
+      localStorage.setItem('todoList', JSON.stringify(newList))
     }
-
   }
 })
 
-export const { setTask, completedTask, deleteSingleTask } = taskSlice.actions
+export const { setTask, completedTask, deleteSingleTask, deleteAllCompleteTask } = taskSlice.actions
 export default taskSlice.reducer
 
